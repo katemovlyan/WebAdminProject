@@ -1,0 +1,8 @@
+out/
+classes/
+target/
+.idea/
+*.iws
+*.ipr
+*.iml
+documentation/
