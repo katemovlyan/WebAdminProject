@@ -14,8 +14,10 @@ public class PageEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "page_id")
     private Long id;
+
     @Column(name = "page_title")
     private String title;
+
     @Lob
     @Column(name = "page_content")
     private String content;

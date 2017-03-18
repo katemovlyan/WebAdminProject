@@ -14,15 +14,19 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private Long id;
+
     @NotBlank
     @Column(name = "product_type")
     private String productType;
+
     @NotBlank
     @Column(name = "product_brand")
     private String productBrand;
+
     @NotBlank
     @Column(name = "product_model")
     private String productModel;
+    
     @Column(name = "product_price")
     private Double productPrice;
 
@@ -101,11 +105,6 @@ public class ProductEntity {
         return id.equals(product.id);
 
     }
-
-//    @Override
-//    public int hashCode() {
-//        return id.hashCode();
-//    }
 
     @Override
     public String toString() {

@@ -19,14 +19,18 @@ public class ArticleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "article_id")
     private Long id;
+
     @NotEmpty
     @Column(name = "article_title")
     private String title;
+
     @NotEmpty
     @Column(name = "article_content")
     private String content;
+
     @Column(name = "article_date")
     private Timestamp date;
+
     @NotEmpty
     @Column(name = "article_authors")
     private String authors;

@@ -31,17 +31,21 @@ public class UserEntity implements Serializable {
     @Size(min = 4, max = 16)
     @Column(name = "user_name", unique = true)
     private String username;
+
     // MD5 HASH
     @NotBlank
     @Size(min = 8, max = 40)
     @Column(name = "user_pass", length = 32)
     private String password;
+
     @Email
     @Column(name = "user_email")
     private String email;
+
     @Column(name = "user_access_lvl")
     @Enumerated(EnumType.ORDINAL)
     private AccessLevel accessLvl;
+
     @Column(name = "user_email_valid")
     private Long emailKey;
 
@@ -51,7 +55,7 @@ public class UserEntity implements Serializable {
             joinColumns =
                     {@JoinColumn(name="user_id", referencedColumnName="user_id", foreignKey = @ForeignKey(name = "user_id_fk"))},
             inverseJoinColumns =
-                    {@JoinColumn(name="article_id", referencedColumnName="article_id", foreignKey = @ForeignKey(name = "article_id_fk"))})//},
+                    {@JoinColumn(name="article_id", referencedColumnName="article_id", foreignKey = @ForeignKey(name = "article_id_fk"))})
     private Set<ArticleEntity> articles;
 
     public UserEntity() {
