@@ -51,6 +51,8 @@ public class AuthController {
                 Cookie cookie = new Cookie(AttributeNames.SESSION_USERNAME, username);
                 cookie.setMaxAge(60 * 60 * 24 * 365);
                 resp.addCookie(cookie);
+            } else {
+
             }
 
             if (currUser.getAccessLvl() == UserEntity.AccessLevel.User) {
